@@ -1,0 +1,6 @@
+<%= simple_form_for tweet do |f| %>
+  <%= f.input :body, placeholder: "What's happening?", label: false, class: "form-tweet" %>
+  <div class="d-flex justify-content-end">
+    <%= f.submit "Tweet", class: "btn-tweet-sm" %>
+  </div>
+<% end %>

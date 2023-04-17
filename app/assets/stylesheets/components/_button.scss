@@ -2,7 +2,7 @@
   text-decoration: none;
   text-align: center;
   border-radius: 22px;
-  background-color: #1C9BEF;
+  background-color: $primary;
   padding: 10px 13px;
   width: 90%;
   display: block;
@@ -11,12 +11,27 @@
   font-size: 14px;
 }
 
+.btn-tweet-sm {
+  text-decoration: none;
+  text-align: center;
+  border-radius: 22px;
+  border: none;
+  background-color: #1C9BEF;
+  padding: 8px 14px;
+  display: block;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+
+
 .btn-log {
   text-decoration: none;
   text-align: center;
   border-radius: 22px;
   padding: 4px 8px;
-  color: #1C9BEF;
-  border: solid #1C9BEF;
+  color: $primary;
+  border: solid $primary;
   font-size: 14px;
 }
