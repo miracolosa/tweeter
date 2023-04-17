@@ -1,12 +1,19 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+// Navigation bar
+.nav-button {
+  margin: 12px 0px;
+
+  span {
+    margin-left: 1rem;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.nav-link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
 }
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-logo {
+  width: 25px;
 }
