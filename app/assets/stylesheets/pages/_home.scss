@@ -9,4 +9,9 @@
 .row > .col-sm-6 {
   border-left: solid $light-gray;
   border-right: solid $light-gray;
+  padding: 0;
+
+  h5 {
+    padding-left: 12px;
+  }
 }
