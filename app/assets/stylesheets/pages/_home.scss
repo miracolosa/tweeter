@@ -1,1 +1,31 @@
-// Specific CSS for your home-page
+// Structure of index page
+.index.row {
+  h5 {
+    padding-top: 1rem;
+  }
+}
+
+.row > .col-sm-6 {
+  border-left: solid $light-gray;
+  border-right: solid $light-gray;
+}
+
+// Navigation bar
+.nav-button {
+  margin: 12px 0px;
+
+  span {
+    margin-left: 1rem;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.nav-logo {
+  width: 25px;
+}
