@@ -12,7 +12,7 @@ class TweetsController < ApplicationController
       if @tweet.save
         format.turbo_stream
       else
-        format.html { redirect_to root_path }
+        format.html { redirect_to root_path, status: :unprocessable_entity }
       end
     end
   end

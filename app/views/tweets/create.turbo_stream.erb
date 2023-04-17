@@ -1,0 +1,3 @@
+<%= turbo_stream action="prepend" target="tweets" do %>
+  <%= render "tweet", tweet: @tweet %>
+<% end %>
