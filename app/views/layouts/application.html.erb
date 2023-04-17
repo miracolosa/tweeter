@@ -11,8 +11,35 @@
   </head>
 
   <body>
-    <%= render "shared/flashes" %>
+    <header>
+      <%= render "shared/flashes" %>
+    </header>
+    <div class="container px-4 mx-auto">
+      <div class="index row">
+        <div class="col-sm">
+          <div>
+            <h5 class="mb-3">Tweeter</h5>
+            <%= render "shared/navbar" %>
+            <%= link_to "Tweet", "#", class: "btn-tweet" %>
+            <div class="mt-4">
+              <% if user_signed_in? %>
+                <%= link_to "Log out", destroy_user_session_path, class: "btn-log", data: { turbo_method: :delete }  %>
+              <% else %>
+                <%= link_to "Log in", new_user_session_path, class: "btn-log"  %>
+                <%= link_to "Sign up", new_user_registration_path, class: "btn-log"  %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <%= yield %>
+        </div>
+        <div class="col-sm">
+          <h5>Search</h5>
+        </div>
+      </div>
+    </div>
 
-    <%= yield %>
+
   </body>
 </html>
