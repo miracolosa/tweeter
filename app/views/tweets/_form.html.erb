@@ -1,7 +1,7 @@
 <div>
   <%= simple_form_for tweet,
       html: { data: { action: "turbo:submit-end->reset-form#resetForm",
-                      controller: "reset-form" }, class: "d-flex" } do |f| %>
+                      controller: "reset-form" } } do |f| %>
     <%= f.input :body, placeholder: "What's happening?", label: false %>
     <div class="d-flex justify-content-end">
       <%= f.submit "Tweet", class: "btn-tweet-sm" %>
