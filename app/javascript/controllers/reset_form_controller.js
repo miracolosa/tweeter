@@ -5,7 +5,7 @@ export default class extends Controller {
   connect() {
   }
 
-  resetForm(event) {
-    event.target.reset()
+  resetForm() {
+    this.element.reset()
   }
 }
