@@ -1,0 +1,46 @@
+.layout-devise {
+
+  .title-tweeter-left {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    color: white;
+
+    h3 {
+      font-weight: 700;
+    }
+  }
+
+  .devise-layout-right {
+    margin: 0 auto;
+    padding: 12rem 2rem;
+    height: 100vh;
+
+    h2 {
+      font-size: 1.325rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      margin-top: 1.7rem;
+    }
+
+    .form-inputs {
+      width: 100%;
+    }
+
+    input.btn {
+      background: $primary;
+      width: 100%;
+      border-radius: 5px;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .link-grey-devise {
+      color: grey;
+      font-size: 14px;
+    }
+  }
+
+}

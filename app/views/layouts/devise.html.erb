@@ -10,12 +10,26 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body class="layout-devise">
     <header>
       <%= render "shared/flashes" %>
     </header>
 
-    <%= yield %>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="title-tweeter-left">
+          <h3>Tweeter</h3>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="devise-layout-right">
+          <%= link_to 'Back', :back, class: "link-grey-devise" %>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+
+
 
   </body>
 </html>

@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Tweet, type: :model do
+  user = User.create(email: "test@gmail.com", password: "topsecret", password_confirmation: "topsecret")
   subject do
-    user = User.create(email: "test@gmail.com", password: "topsecret", password_confirmation: "topsecret")
     described_class.new(body: "This is a tweet", user:)
   end
 
@@ -27,5 +27,4 @@ RSpec.describe Tweet, type: :model do
       end
     end
   end
-
 end
