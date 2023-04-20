@@ -1,5 +1,19 @@
 // Structure of index page
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 .index.row {
+  height: 100%;
+
   h5 {
     padding-top: 1rem;
     font-weight: 600;
