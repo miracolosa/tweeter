@@ -13,7 +13,10 @@ class TweetsController < ApplicationController
       if @tweet.save
         format.turbo_stream
       else
-        format.html { redirect_to root_path, status: :unprocessable_entity }
+        format.html do
+          flash[:tweet_errors] = "Body can't be blank."
+          redirect_to root_path
+        end
       end
     end
   end

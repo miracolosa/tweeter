@@ -10,10 +10,8 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
+
   <body>
-    <header>
-      <%= render "shared/flashes" %>
-    </header>
     <div class="container px-4 mx-auto">
       <div class="index row">
         <div class="col-sm">
@@ -39,5 +37,8 @@
         </div>
       </div>
     </div>
+    <% unless flash[:tweet_errors]  %>
+      <%= render "shared/flashes" %>
+    <% end %>
   </body>
 </html>
