@@ -1,1 +1,7 @@
-<p><%= tweet.body %></p>
+<div>
+  <div class="d-flex justify-content-start align-items-center">
+    <span class="tweet-bold me-1"><%= tweet.user.name %></span>
+    <span class="tweet-grey">@<%= tweet.user.username %></span>
+  </div>
+  <%= tweet.body %>
+</div>
