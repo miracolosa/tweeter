@@ -1,0 +1,11 @@
+<div class="container-profile">
+  <div class="d-flex mt-1">
+    <%= link_to :back do %>
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="btn-back"><g><path d="M7.414 13l5.043 5.04-1.414 1.42L3.586 12l7.457-7.46 1.414 1.42L7.414 11H21v2H7.414z"></path></g></svg>
+    <% end %>
+    <div class="top-profile ms-4">
+      <span><%= current_user.name %></span>
+      <p> <%= current_user.tweets.count %> tweets</p>
+    </div>
+  </div>
+</div>

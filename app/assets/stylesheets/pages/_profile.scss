@@ -1,0 +1,16 @@
+.container-profile {
+  > div {
+    padding: 0px 16px;
+  }
+
+  .top-profile {
+    span {
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 12px;
+      color: $gray;
+    }
+  }
+}
