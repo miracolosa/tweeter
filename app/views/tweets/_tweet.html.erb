@@ -1,4 +1,4 @@
-<div>
+<div id="<%= dom_id(tweet) %>">
   <div class="d-flex align-items-start">
     <%# Avatar %>
     <%= link_to profile_path(tweet.user), data: {turbo: false} do  %>
