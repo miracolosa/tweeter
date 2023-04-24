@@ -16,7 +16,9 @@
       <div class="index row">
         <div class="col-sm-3">
           <div>
+          <%= link_to "/", class: "text-decoration-none text-black" do  %>
             <h5 class="mb-3">Tweeter</h5>
+          <% end %>
             <%= render "shared/navbar" %>
             <%= link_to "Tweet", "#", class: "btn-tweet" %>
             <div class="mt-4">
