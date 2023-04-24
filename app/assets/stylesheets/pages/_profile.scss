@@ -13,4 +13,61 @@
       color: $gray;
     }
   }
+
+  .position-relative {
+    a {
+    position: absolute;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 22px;
+    padding: 4px 11px;
+    color: black;
+    border: solid $light-gray;
+    font-size: 0.875rem;
+    right: 17px;
+    top: 13px;
+    font-weight: 600;
+    }
+  }
+
+  .bio-profile {
+    margin-top: 77px;
+
+
+
+    > span {
+      font-weight: 800;
+    }
+
+    .bio-username {
+      font-size: 14px;
+      color: $gray;
+    }
+
+    .bio-text {
+      font-size: 14px;
+      color: black;
+    }
+
+    .bio-info {
+      color: $gray;
+      span {
+        font-size: 13px;
+      }
+      svg {
+        width: 14px;
+        fill: currentColor;
+        margin-right: 0.3em;
+      }
+    }
+
+  }
+
+  h6 {
+    padding: 10px 57px;
+    margin-top: 1rem;
+    border-bottom: solid $light-gray;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
 }

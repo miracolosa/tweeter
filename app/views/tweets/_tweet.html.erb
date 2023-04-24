@@ -1,5 +1,7 @@
 <div class="d-flex align-items-start">
-  <%= image_tag tweet.user.profile_image, class: "avatar", alt: "avatar" %>
+  <%= link_to profile_path(tweet.user), data: {turbo: false} do  %>
+    <%= image_tag tweet.user.profile_image, class: "avatar", alt: "avatar" %>
+  <% end %>
   <div class="ms-2">
     <div class="d-flex justify-content-start align-items-center">
       <span class="tweet-bold me-1"><%= tweet.user.name %></span>
