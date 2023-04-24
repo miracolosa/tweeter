@@ -10,6 +10,7 @@
       <div class="d-flex justify-content-start align-items-center">
         <span class="tweet-bold me-1"><%= tweet.user.name %></span>
         <span class="tweet-grey">@<%= tweet.user.username %></span>
+        <span class="tweet-grey ms-1">· <%= tweet.time_difference %> </span>
       </div>
       <%= tweet.body %>
     </div>
