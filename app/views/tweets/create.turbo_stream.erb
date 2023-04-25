@@ -1,3 +1,7 @@
 <%= turbo_stream.prepend "tweets" do %>
   <%= render "tweet", tweet: @tweet %>
 <% end %>
+
+<%= turbo_stream.update "empty_state" do %>
+  <div></div>
+<% end %>
