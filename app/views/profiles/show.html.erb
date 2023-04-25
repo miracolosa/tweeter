@@ -17,8 +17,8 @@
 
   <%# Profile Image %>
   <div class="position-relative">
-    <%= image_tag @profile.profile_image, class: "avatar-large" %>
-    <% if @profile == current_user  %> do
+    <%= @profile.profile_image.attached? ? image_tag(@profile.profile_image, class: "avatar-large") : image_tag("twitter-bird", class: "avatar-large avatar-white") %>
+    <% if @profile == current_user %>
       <%= link_to "Edit profile",  edit_user_registration_path %>
     <% end %>
   </div>
