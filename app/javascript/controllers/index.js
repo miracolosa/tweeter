@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import ResetFormController from "./reset_form_controller"
 application.register("reset-form", ResetFormController)
+
+import TweetListController from "./tweet_list_controller"
+application.register("tweet-list", TweetListController)

@@ -1,5 +1,6 @@
 class Tweet < ApplicationRecord
   belongs_to :user
+  belongs_to :tweet, optional: true
 
   validates :body, presence: true, length: { maximum: 240 }
 
@@ -11,6 +12,16 @@ class Tweet < ApplicationRecord
       return "#{(difference / 1.hour).round}h"
     else
       return "#{(difference / 1.minute).round}m"
+    end
+  end
+
+  def tweet_type
+    if tweet_id? && body?
+      'quote'
+    elsif tweet_id?
+      'retweet'
+    else
+      'tweet'
     end
   end
 end
