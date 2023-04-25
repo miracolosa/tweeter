@@ -8,14 +8,14 @@
   <div class="d-flex align-items-start">
     <%# Avatar %>
     <%= link_to profile_path(tweet.user), data: {turbo: false} do  %>
-      <%= tweet.user.profile_image.attached? ? image_tag(tweet.user.profile_image, class: "avatar", alt: "avatar") : image_tag("twitter-bird", class: "avatar", alt: "avatar") %>
+      <%= tweet.tweet.user.profile_image.attached? ? image_tag(tweet.tweet.user.profile_image, class: "avatar", alt: "avatar") : image_tag("twitter-bird", class: "avatar", alt: "avatar") %>
     <% end %>
 
     <%# Tweet body %>
     <div class="ms-2">
       <div class="d-flex justify-content-start align-items-center">
-        <span class="tweet-bold me-1"><%= tweet.user.name %></span>
-        <span class="tweet-grey">@<%= tweet.user.username %></span>
+        <span class="tweet-bold me-1"><%= tweet.tweet.user.name %></span>
+        <span class="tweet-grey">@<%= tweet.tweet.user.username %></span>
         <span class="tweet-grey ms-1">· <%= tweet.tweet.time_difference %> </span>
       </div>
       <%= tweet.tweet.body %>
