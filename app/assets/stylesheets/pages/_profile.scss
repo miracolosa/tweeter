@@ -71,3 +71,29 @@
     font-weight: 600;
   }
 }
+
+.profile-info {
+  margin-top: 500px;
+
+  .profile-log {
+  font-size: 15px;
+  line-height: 20px;
+  border-radius: 26px;
+  padding: 6px 8px;
+  margin-bottom: 18px;
+
+    &:hover {
+      background-color: $light-gray;
+    }
+  .tweet-bold {
+    font-weight: 600;
+  }
+
+  .tweet-grey {
+    color: $gray;
+    font-size: 14px;
+  }
+
+  }
+
+}

@@ -21,8 +21,15 @@
           <% end %>
             <%= render "shared/navbar" %>
             <%= link_to "Tweet", "#", class: "btn-tweet" %>
-            <div class="mt-4">
+            <div class="profile-info">
               <% if user_signed_in? %>
+                <div class="profile-log d-flex align-items-center">
+                  <%= current_user.profile_image.attached? ? image_tag(current_user.profile_image, class: "avatar", alt: "avatar") : image_tag("twitter-bird", class: "avatar", alt: "avatar") %>
+                  <div class="ms-2 d-flex flex-column">
+                    <span class="tweet-bold me-1"><%= current_user.name %></span>
+                    <span class="tweet-grey">@<%= current_user.username %></span>
+                  </div>
+                </div>
                 <%= link_to "Log out", destroy_user_session_path, class: "btn-log", data: { turbo_method: :delete }  %>
               <% else %>
                 <%= link_to "Log in", new_user_session_path, class: "btn-log"  %>
