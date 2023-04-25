@@ -2,13 +2,13 @@ class Tweet < ApplicationRecord
   belongs_to :user
   belongs_to :tweet, optional: true
 
-  validates :body, presence: true, length: { maximum: 240 }
+  validates :body, length: { maximum: 240 }, allow_blank: false, unless: :tweet_id
 
   def time_difference
     difference = Time.current - self.created_at
     if (difference / 1.hour).round > 24
       return self.created_at.strftime("%b %d, %Y")
-    elsif (difference / 1.minute).round > 120
+    elsif (difference / 1.minute).round > 60
       return "#{(difference / 1.hour).round}h"
     else
       return "#{(difference / 1.minute).round}m"

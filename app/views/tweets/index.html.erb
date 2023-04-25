@@ -4,7 +4,9 @@
 </div>
 
 <%= turbo_frame_tag "tweets" do %>
-  <%= render @tweets %>
+  <% @tweets.each do |tweet| %>
+    <%= render "tweets/#{tweet.tweet_type}", tweet: tweet %>
+  <% end %>
 <% end %>
 
 <%= turbo_frame_tag "empty_state" do %>
