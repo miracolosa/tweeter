@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :tweets, dependent: :destroy
+  has_many :comments, dependent: :destroy
   has_one_attached :profile_image
 
   validates :username, uniqueness: true

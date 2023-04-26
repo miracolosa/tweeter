@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "tweets#index"
 
   resources :tweets, only: %i[index create destroy] do
+    resources :comments, only: %i[create destroy]
     member do
       post :retweet
     end
