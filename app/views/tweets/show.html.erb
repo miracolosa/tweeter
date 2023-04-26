@@ -1,0 +1,32 @@
+<div class="container-tweet">
+  <%# Top with name and back link %>
+  <div class="d-flex mt-2">
+    <%= link_to :back do %>
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="btn-back"><g><path d="M7.414 13l5.043 5.04-1.414 1.42L3.586 12l7.457-7.46 1.414 1.42L7.414 11H21v2H7.414z"></path></g></svg>
+    <% end %>
+    <span class="ms-4">Tweet</span>
+  </div>
+
+  <div class="">
+    <%# Avatar %>
+    <div class="d-flex align-items-center">
+      <%= @tweet.user.profile_image.attached? ? image_tag(@tweet.user.profile_image, class: "avatar", alt: "avatar") : image_tag("twitter-bird", class: "avatar", alt: "avatar") %>
+      <div class="ms-2 d-flex flex-column">
+        <span class="tweet-bold me-1"><%= @tweet.user.name %></span>
+        <span class="tweet-grey">@<%= @tweet.user.username %></span>
+      </div>
+    </div>
+
+    <%# Tweet body %>
+    <p><%= @tweet.body %></p>
+
+    <%# Tweet details %>
+    <span> <%= @tweet.created_at.strftime("%l:%M %p") %> • <%= @tweet.created_at.strftime("%b %d, %Y") %> </span>
+  </div>
+
+  <%# Reply form %>
+  <div class="form-tweet mt-3">
+  <%= render "reply", comment: @comment, tweet: @tweet %>
+</div>
+
+</div>
