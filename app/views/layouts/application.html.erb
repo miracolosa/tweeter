@@ -12,9 +12,9 @@
 
 
   <body>
-    <div class="index container px-4 mx-auto">
-      <div class="index row">
-        <div class="col-sm-3">
+    <div class="index container">
+      <div class="index row justfy-content-md-center">
+        <div class="col col-lg-3">
           <div>
           <%= link_to "/", class: "text-decoration-none text-black" do  %>
             <h5 class="mb-3">Tweeter</h5>
@@ -38,10 +38,10 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-md-auto">
           <%= yield %>
         </div>
-        <div class="col-sm-3">
+        <div class="col col-lg-3">
           <h5>Search</h5>
         </div>
       </div>
