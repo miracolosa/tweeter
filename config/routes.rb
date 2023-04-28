@@ -8,5 +8,7 @@ Rails.application.routes.draw do
       post :retweet
     end
   end
+
   resources :profiles, only: %i[show]
+  resources :likes, only: %i[create]
 end
