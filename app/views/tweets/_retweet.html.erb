@@ -7,7 +7,7 @@
 
   <div class="d-flex align-items-start">
     <%# Avatar %>
-    <%= link_to profile_path(tweet.user), data: {turbo: false} do  %>
+    <%= link_to profile_path(tweet.tweet.user), data: {turbo: false} do  %>
       <%= tweet.tweet.user.profile_image.attached? ? image_tag(tweet.tweet.user.profile_image, class: "avatar", alt: "avatar") : image_tag("twitter-bird", class: "avatar", alt: "avatar") %>
     <% end %>
 
