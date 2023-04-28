@@ -1,18 +1,30 @@
-.btn-action {
-  padding: 0px 47px;
-}
-
 .link-action {
   text-decoration: none;
   color: $gray;
-  // font-weight: 400;
-  // font-size: 18px;
   display: flex;
   align-items: center;
 }
 
 svg {
-  width: 14px;
   fill: currentColor;
   margin-right: 0.3em;
+}
+
+
+#tweets {
+  .btn-action {
+    padding: 0px 47px;
+  }
+
+  svg {
+    width: 14px;
+  }
+}
+
+.container-tweet {
+  font-size: 18px;
+
+  svg {
+    width: 18px;
+  }
 }

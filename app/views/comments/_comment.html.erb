@@ -10,11 +10,9 @@
       <div class="d-flex justify-content-start align-items-center">
         <span class="tweet-bold me-1"><%= tweet.user.name %></span>
         <span class="tweet-grey">@<%= tweet.user.username %></span>
-        <span class="tweet-grey ms-1">· <%= tweet.time_difference %> </span>
+        <span class="tweet-grey ms-1">· <%= tweet.tweet.time_difference %> </span>
       </div>
-      <%= link_to tweet_path(tweet), data: {turbo: false}, class: "tweet-body" do  %>
-        <%= tweet.body %>
-      <% end %>
+      <%= tweet.body %>
     </div>
   </div>
   <%# Buttons %>

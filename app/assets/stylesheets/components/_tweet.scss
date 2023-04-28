@@ -1,6 +1,11 @@
 #tweets {
   font-size: 15px;
 
+  .tweet-body {
+    color: black;
+    text-decoration: none;
+  }
+
   > div {
     border-bottom: solid $light-gray;
     padding: 5px 9px;

@@ -1,0 +1,12 @@
+
+  <%= simple_form_for [tweet, comment],
+      html: { data: { action: "turbo:submit-end->reset-form#resetForm",
+                      controller: "reset-form" } } do |f| %>
+        <div class="d-flex align-items-center ps-3">
+          <%= current_user.profile_image.attached? ? image_tag(current_user.profile_image, class: "avatar", alt: "avatar") : image_tag("twitter-bird", class: "avatar", alt: "avatar") %>
+          <%= f.input :body, placeholder: "Tweet your reply", label: false %>
+        </div>
+        <div class="d-flex justify-content-end pe-3">
+          <%= f.submit "Reply", class: "btn-tweet-sm" %>
+        </div>
+  <% end %>
