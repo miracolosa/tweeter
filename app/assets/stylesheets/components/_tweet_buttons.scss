@@ -11,9 +11,11 @@ svg {
 }
 
 
-#tweets {
+#tweets,
+#comment-actions {
   .btn-action {
     padding: 0px 47px;
+    font-size: 15px;
   }
 
   svg {

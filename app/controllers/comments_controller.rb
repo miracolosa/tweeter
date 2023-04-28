@@ -1,13 +1,22 @@
 class CommentsController < ApplicationController
+  before_action :set_tweet
+
   def create
     @comment = Comment.new(comment_params)
-    @tweet = Tweet.find(params[:tweet_id])
     @comment.tweet = @tweet
     @comment.user = current_user
     format_response
   end
 
   def destroy
+    @comment = @tweet.comments.find(params[:id])
+    @comment.destroy
+    respond_to do |format|
+      format.turbo_stream
+      format.html do
+        redirect_to tweet_path(@tweet), alert: "Comment could not be created"
+      end
+    end
   end
 
   private
@@ -23,6 +32,10 @@ class CommentsController < ApplicationController
         end
       end
     end
+  end
+
+  def set_tweet
+    @tweet = Tweet.find(params[:tweet_id])
   end
 
   def comment_params

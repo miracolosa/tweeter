@@ -37,4 +37,11 @@
     <%= render "comments/form", comment: @comment, tweet: @tweet %>
   </div>
 
+  <%# Comments %>
+  <%= turbo_frame_tag "#{dom_id(@tweet)}_comments" do %>
+    <% @comments.each do |comment| %>
+      <%= render "comments/comment", comment: comment %>
+    <% end %>
+  <% end %>
+
 </div>

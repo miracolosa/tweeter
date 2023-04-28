@@ -10,15 +10,16 @@
     border-bottom: solid $light-gray;
     padding: 5px 9px;
   }
+}
 
-  .tweet-bold {
-    font-weight: 600;
-  }
+.tweet-bold {
+  font-size: 15px;
+  font-weight: 600;
+}
 
-  .tweet-grey {
-    color: $gray;
-    font-size: 14px;
-  }
+.tweet-grey {
+  color: $gray;
+  font-size: 14px;
 }
 
 .retweet {
