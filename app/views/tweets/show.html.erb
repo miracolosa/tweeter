@@ -25,7 +25,9 @@
   </div>
 
   <div class="show-likes pb-3">
-    <span> X likes</span>
+    <span class="<%= dom_id(@tweet) %>_likes-size">
+      <%= pluralize(@tweet.likes.size, "Like") %>
+    </span>
   </div>
 
   <div class="show-actions d-flex justify-content-evenly align-items-center">

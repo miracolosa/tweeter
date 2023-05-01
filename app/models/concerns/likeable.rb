@@ -5,7 +5,7 @@ module Likeable
     has_many :likes, as: :likeable
 
     def liked_by?(user)
-      likes.where(User: user).any?
+      likes.where(user_id: user).any?
     end
   end
 end
