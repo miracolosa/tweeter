@@ -16,7 +16,7 @@ body {
 }
 
 .index.row {
-  height: 100%;
+  height: 100vh;
 
   h5 {
     padding-top: 1rem;
@@ -44,4 +44,10 @@ body {
   .profile-info {
     padding-bottom: 1rem;
   }
+}
+
+
+.column-left,
+.column-right {
+  position: fixed;
 }
