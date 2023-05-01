@@ -31,4 +31,15 @@
   .btn-tweet-submit {
     height: 32px;
   }
+
+  .reply-user {
+    color: #747373;
+    font-size: 0.86rem;
+    margin-left: 68px;
+    font-weight: 500;
+
+    span {
+      color: $primary;
+    }
+  }
 }
