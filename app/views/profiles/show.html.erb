@@ -37,6 +37,8 @@
   <%# Tweets linked to user %>
   <h6>Tweets</h6>
   <%= turbo_frame_tag "tweets" do %>
-    <%= render @tweets %>
+    <% @profile.tweets.each do |tweet| %>
+      <%= render "tweets/#{tweet.tweet_type}", tweet: tweet %>
+    <% end %>
   <% end %>
 </div>
