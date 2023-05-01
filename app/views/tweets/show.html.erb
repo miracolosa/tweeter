@@ -25,6 +25,9 @@
   </div>
 
   <div class="show-likes pb-3">
+    <span class="<%= dom_id(@tweet) %>_retweets-size">
+      <%= pluralize(Tweet.where(tweet_id: @tweet).size, "Retweet") %> •
+    </span>
     <span class="<%= dom_id(@tweet) %>_likes-size">
       <%= pluralize(@tweet.likes.size, "Like") %>
     </span>

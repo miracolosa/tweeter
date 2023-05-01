@@ -4,12 +4,24 @@
   border-radius: 22px;
   background-color: $primary;
   padding: 11px 32px;
-  width: 222px;
+  width: 13.9rem;
   display: block;
   color: white;
   font-weight: 600;
   font-size: 15px;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
+  transition: 0.3s;
+
+  &:hover {
+    color: white;
+    background-color: #156ea9;
+  }
+}
+
+@media (max-width: 992px) {
+  .btn-tweet {
+    width: 100%;
+  }
 }
 
 .btn-tweet-sm {
@@ -23,6 +35,12 @@
   color: white;
   font-weight: 700;
   font-size: 12px;
+  transition: 0.3s;
+
+  &:hover {
+    color: white;
+    background-color: #156ea9;
+  }
 }
 
 
@@ -44,4 +62,5 @@
 
 .like-filled {
   fill: #F9197F;
+  color: #F9197F;
 }

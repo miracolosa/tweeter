@@ -1,0 +1,82 @@
+.link-action {
+  text-decoration: none;
+  color: $gray;
+  display: flex;
+  align-items: center;
+}
+
+svg {
+  fill: currentColor;
+  margin-right: 0.3em;
+}
+
+.container-tweet {
+  .btn-action {
+    span {
+      font-size: 1rem;
+    }
+    svg {
+      width: 18px;
+    }
+  }
+}
+
+.btn-action {
+  span {
+    font-size: 0.9rem;
+  }
+
+  svg {
+    width: 1rem;
+  }
+}
+
+.btn-action {
+  .action-hover {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+
+    svg {
+      margin: 0px;
+    }
+  }
+}
+
+.action-comment {
+  .link-action:hover {
+    .action-hover {
+      background-color: #E4EEF7;
+    }
+  }
+}
+
+.action-retweet {
+  .link-action:hover {
+    color: #00BA7C;
+
+    .action-hover {
+      background-color: #E3F1EA;
+    }
+  }
+}
+
+.action-like {
+  .link-action:hover {
+    color: #F9197F;
+
+    .action-hover {
+      background-color: #F8E3EB;
+    }
+  }
+}
+
+.action-delete {
+  .link-action:hover {
+    color: #F4212D;
+
+    .action-hover {
+      background-color: #f7c0c2;
+    }
+  }
+}

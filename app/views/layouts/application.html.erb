@@ -12,15 +12,17 @@
 
 
   <body>
-    <div class="index container">
+    <div class="index container-xl">
       <div class="index row justfy-content-md-center">
         <div class="col-sm-3">
-          <div>
-          <%= link_to "/", class: "text-decoration-none text-black" do  %>
-            <h5 class="mb-3">Tweeter</h5>
-          <% end %>
-            <%= render "shared/navbar" %>
-            <%= link_to "Tweet", "#", class: "btn-tweet" %>
+          <div class="column-left">
+            <div class="ps-1">
+              <%= link_to "/", class: "text-decoration-none text-black" do  %>
+              <h5 class="mb-3">Tweeter</h5>
+              <% end %>
+              <%= render "shared/navbar" %>
+              <%= link_to "Tweet", "#", class: "btn-tweet mt-3" %>
+            </div>
             <div class="profile-info">
               <% if user_signed_in? %>
                 <div class="profile-log d-flex align-items-center">
